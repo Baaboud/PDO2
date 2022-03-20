@@ -22,7 +22,7 @@ class DB
         $stmt = $this->pdo->prepare("select * from $table where id=?");
         try {
             $stmt->execute([$id]);
-            return $stmt->fetchAll(PDO::FETCH_OBJ);
+            return $stmt->fetchAll(PDO::FETCH_OBJ)[0];
         } catch (Exception $ex) {
             return $ex;
         }
@@ -89,12 +89,12 @@ class DB
 
     // Update function
     function update($table,$data,$id){
-        $temp = "";
         foreach ($data as $key => $value) {
-            $data[$value] = $key." = '$value' ";
+            $data[$key] = $key." = '$value' ";
         }
         $v = implode(',',$data);
-        echo "update $table set $v WHERE id = $id;";
+        // echo "<pre>". var_dump($data) ."</pre>" ;
+        // echo "<h1>update $table set $v WHERE id = $id;</h1>";
         $stmt=$this->pdo->prepare("update $table set $v WHERE id = $id;");
         $stmt->execute();
     }
