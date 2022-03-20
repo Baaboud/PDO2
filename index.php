@@ -23,7 +23,7 @@ $rows = $db->selectAll("category");
             <h1 class="bg-dark text-light text-center py-2 mt-3">Category</h1>
             <div class="row mt-2">
                 <div class="col-3">
-                    <a href="../category/add.php" class="btn btn-outline-danger p-2 fs-4 w-100">Add New Category</a>
+                    <a href="add.php" class="btn btn-outline-dark p-2 fs-4 w-100">Add New Category</a>
                 </div>
             </div>
             <div class="card-group my-3 justify-content-center">

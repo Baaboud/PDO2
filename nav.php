@@ -7,10 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-4">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Categories</a>
+                    <a class="nav-link active" href="/PDO2/index.php">Categories</a>
                 </li>
             </ul>
         </div>
